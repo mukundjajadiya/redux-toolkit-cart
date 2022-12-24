@@ -1,13 +1,121 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* App Wrapper Style */
+.app-wrapper {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* Nav Style */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  background: rgb(220, 220, 220);
+}
+
+.nav-link > a {
+  margin: auto 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-link > a:hover {
+  color: rgb(232, 94, 94);
+}
+
+/* Products Style */
+.product-wrapper {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 23%;
+  margin: 0;
+  border-radius: 10px;
+  background: rgb(234, 234, 234);
+}
+
+.card > img {
+  /* width: 100%; */
+  height: 200px;
+  object-fit: contain;
+}
+
+.card > h4 {
+  margin: 10px;
+}
+.card > h5 {
+  margin: 10px;
+}
+
+.add-cart-btn {
+  padding: 5px;
+}
+
+/* cart style */
+
+.cart-products-wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.cart-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+}
+.cart-product > img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.remove-item-btn {
+  padding: 10px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .card {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .card {
+    width: 31%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .card {
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .card {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .nav-wrapper {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+  }
 }
